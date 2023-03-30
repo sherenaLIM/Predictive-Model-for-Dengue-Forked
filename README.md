@@ -41,14 +41,14 @@ Given weather, location, and infection data, you have been tasked to predict whe
 
 Stakeholders <br>
 
-Primary stakeholder(s): Ministry of Health, Singapore (MOH) <br>
+- Primary stakeholder(s): Ministry of Health, Singapore (MOH) <br>
 >  * Public Health Prevention Awareness Campaigns 
 >  * Mosquito Fogging Services 
 >  * Airborne Pesticides
 >  * Wolbachia Mosquitos Project
 >  *  Mosquito Traps
 
-Secondary stakeholders: General Public for Awareness, Manufacturers of Dengue Prevention Solutions
+- Secondary stakeholders: General Public for Awareness, Manufacturers of Dengue Prevention Solutions
 
 ----
 ## Dataset
