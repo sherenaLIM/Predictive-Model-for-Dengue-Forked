@@ -29,8 +29,8 @@ Several theories have been proposed to explain this cyclical pattern. <br>
 
 References <br> 
 > * Centers for Disease Control and Prevention, National Center for Emerging and Zoonotic Infectious Diseases (NCEZID), Division of Vector-Borne Diseases (DVBD); url: https://www.cdc.gov/dengue/symptoms/index.html
-> * 2023 National Centre for Infectious Diseases. url: https://www.ncid.sg/Health-Professionals/Articles/Pages/Rise-in-dengue-cases-underscores-need-for-constant-vigilance.aspx#:~:text=Singapore%20is%20in%20the%20midst,the%202%2C772%20cases%20in%202017.
-
+> * National Centre for Infectious Diseases (2023). url: https://www.ncid.sg/Health-Professionals/Articles/Pages/Rise-in-dengue-cases-underscores-need-for-constant-vigilance.aspx#:~:text=Singapore%20is%20in%20the%20midst,the%202%2C772%20cases%20in%202017.
+> * Meteorological Service Singapore (2023). url: http://www.weather.gov.sg/climate-el-la/
 ----
 
 ## Problem Statement
