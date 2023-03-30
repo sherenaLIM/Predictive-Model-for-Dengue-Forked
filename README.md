@@ -37,18 +37,18 @@ References <br>
 
 Problem Statement <br>
 
-Given weather, location, and infection data, you have been tasked to predict when and where different species of mosquitos will test positive for DENV virus. A more accurate method of predicting outbreaks of Dengue virus in mosquitos will help MOH allocate resources more efficiently and effectively towards preventing transmission of this potentially life-threatening virus.
+Given weather, location, and infection data, you have been tasked to predict the national-level dengue cases 2 weeks into the future. A more accurate method of predicting outbreaks of Dengue virus in mosquitos will help MOH plan resource allocation for dengue control more effectively. If cases are expected to rise sharply, there is a need to plan for more intensive control and enforcement measures to reduce mosquito breeding and consequentially dengue cases. Also quantify the costs and benefits of such control measures.
 
 Stakeholders <br>
 
-- Primary stakeholder(s): Ministry of Health, Singapore (MOH) <br>
+- Primary stakeholder(s): Ministry of Health (MOH), National Environment Agency (NEA), National Center of Infectious Diesease (NCID) <br>
 >  * Public Health Prevention Awareness Campaigns 
 >  * Mosquito Fogging Services 
 >  * Airborne Pesticides
 >  * Wolbachia Mosquitos Project
 >  *  Mosquito Traps
 
-- Secondary stakeholders: General Public for Awareness, Manufacturers of Dengue Prevention Solutions
+- Secondary stakeholders: General Public for Awareness, Suppliers of Dengue Prevention Solutions
 
 ----
 ## Dataset
