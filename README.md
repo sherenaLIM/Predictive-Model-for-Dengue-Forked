@@ -12,7 +12,7 @@
 
 ----
 
-## Problem Statement
+## Background & External Research
 
 Introduction <br>
 
@@ -27,6 +27,10 @@ Several theories have been proposed to explain this cyclical pattern. <br>
 > 2. Dengue in Singapore typically rises in warmer months, from April, peaking in July or August, before declining in September or October. Abnormal climate changes, such as the El Niño weather phenomenon, may affect the mosquito breeding environment, accelerate the life-cycle of Aedes mosquito, shorten the incubation period of the dengue virus and drive up cases. El Nino, a recurring weather pattern related to the warming of surface waters in the Pacific Ocean, is set to resume in 2023. 
 > 3. Population factors also contribute to this endemic. The decrease in dengue transmission due to the successful implementation of the Aedes control programme in the 1970s and 1980s reduced incidence of dengue infection in the population. As herd immunity to dengue is consequently low, a large proportion of the Singapore resident population today remains susceptible to infection by any of the four dengue serotypes.
 
+----
+
+## Problem Statement
+
 Problem Statement <br>
 
 Given weather, location, and infection data, you have been tasked to predict when and where different species of mosquitos will test positive for DENV virus. A more accurate method of predicting outbreaks of Dengue virus in mosquitos will help MOH allocate resources more efficiently and effectively towards preventing transmission of this potentially life-threatening virus.
@@ -35,12 +39,6 @@ Stakeholders <br>
 
 Primary stakeholders: Ministry of Health, Singapore (MOH) <br>
 Secondary stakeholders: General Public for Awareness, Manufacturer of Mosquito Traps / Airborne Pesticides.
-
-----
-
-## Background & External Research
-
-yada yada yada
 
 ----
 ## Dataset
