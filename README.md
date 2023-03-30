@@ -42,7 +42,7 @@ Given weather, location, and infection data, you have been tasked to predict whe
 Stakeholders <br>
 
 Primary stakeholders: Ministry of Health, Singapore (MOH) <br>
-Secondary stakeholders: General Public for Awareness, Manufacturer of Mosquito Traps / Airborne Pesticides.
+Secondary stakeholders: General Public for Awareness, Manufacturer of Mosquito Traps / Airborne Pesticides/ Fogging for mosquitos / Public Health Prevention Awareness Campaigns / Wolbachia Mosquitos Project.
 
 ----
 ## Dataset
