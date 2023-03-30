@@ -53,8 +53,7 @@ Stakeholders <br>
 ----
 ## Dataset
 
-* insert location data - limitation: 
-* insert infection (flu, dengue) data 
+* insert infection (flu, dengue) data - limitation: 2012 - 2022
 
 ----
 ## Technical Report
