@@ -60,6 +60,9 @@ There are 8 weather datasets included in the [`data`](./data/) folder for this p
 
 #### Additional Data
 
+* insert location data - limitation: 
+* insert infection (flu, dengue) data - limitation: 2012 - 2022
+
 ----
 ## Technical Report
 
