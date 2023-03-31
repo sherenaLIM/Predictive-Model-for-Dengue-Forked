@@ -63,10 +63,10 @@ There are 8 weather datasets included in the [`data`](./data/) folder for this p
 * [`surface-air-temperature-monthly-mean-daily-minimum`](./data/surface-air-temperature-monthly-mean-daily-minimum.csv): Mean daily minimum surface air temperature per month from 1982 to 2022, measure in degrees Celsius(°C).
 * [`wet-bulb-temperature-hourly.csv`](./data/wet-bulb-temperature-hourly.csv): Hourly wet bulb temperature in degrees Celcius(°C) at 100% relative humidity.
 
-Dengue Infection Rate and Serology Data 
+Dengue Infection Rate and Serology Data <br>
 yada yada
 
-Google Trends Data
+Google Trends Data <br>
 yada yada
 
 ----
