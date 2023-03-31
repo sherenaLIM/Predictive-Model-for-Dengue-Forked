@@ -53,7 +53,19 @@ Stakeholders <br>
 ----
 ## Dataset
 
-* insert infection (flu, dengue) data - limitation: 2012 - 2022
+1. There are 8 weather datasets included in the data folder for this project. These correponds to rainfall, sunshine, humidity, and temperature information.
+
+* rainfall-monthly-highest-daily-total.csv: Monthly highest total daily rainfall from 1982 to 2022, measured in milimeters(mm).
+* rainfall-monthly-number-of-rain-days.csv: Monthly number of rain days from 1982 to 2022. A day is considered to have “rained” if the total rainfall for * that day is 0.2mm or more.
+* rainfall-monthly-total.csv: Monthly total rain recorded in mm(millimeters) from 1982 to 2022.
+(sunshine-duration-monthly-mean-daily-duration: Mean sunshine hours per month from 1982 to 2022, measured in hours (hrs).
+* relative-humidity-monthly-mean: Mean relative humidity per month from 1982 to 2022, measured in percentage(%).
+* surface-air-temperature-annual-mean-daily-minimum: Mean daily minimum surface air temperature per year from 1982 to 2022, measure in degrees Celsius(°C).
+* surface-air-temperature-monthly-mean-daily-minimum: Mean daily minimum surface air temperature per month from 1982 to 2022, measure in degrees Celsius(°C).
+* wet-bulb-temperature-hourly.csv: Hourly wet bulb temperature in degrees Celcius(°C) at 100% relative humidity.
+
+2. Dengue Infection Rate and Serology Data 
+3. Google Trends Data
 
 ----
 ## Technical Report
