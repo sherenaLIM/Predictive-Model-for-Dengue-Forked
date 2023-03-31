@@ -64,10 +64,10 @@ There are 8 weather datasets included in the [`data`](./data/) folder for this p
 * [`wet-bulb-temperature-hourly.csv`](./data/wet-bulb-temperature-hourly.csv): Hourly wet bulb temperature in degrees Celcius(°C) at 100% relative humidity.
 
 Dengue Infection Rate and Serology Data 
-* Insert Data Description* 
+yada yada
 
 Google Trends Data
-* Insert Data Description* 
+yada yada
 
 ----
 ## Technical Report
