@@ -37,7 +37,7 @@ References <br>
 
 Problem Statement <br>
 
-Given weather, location, and infection data, you have been tasked to predict the national-level dengue cases 2 weeks into the future. A more accurate method of predicting outbreaks of Dengue virus in mosquitos will help MOH plan when and where to allocate resources for dengue control more effectively. If cases are expected to rise sharply, there is a need to plan for more intensive control and enforcement measures to reduce mosquito breeding and consequentially dengue cases. Also quantify the costs and benefits of such control measures.
+Given climate, geospatial, googla trends, as well as infection and serology data, you have been tasked to predict the national-level dengue cases 2 weeks into the future. A more accurate method of predicting outbreaks of Dengue virus in mosquitos will help MOH plan when and where to allocate resources for dengue control more effectively. If cases are expected to rise sharply, there is a need to plan for more intensive control and enforcement measures to reduce mosquito breeding and consequentially dengue cases. Also quantify the costs and benefits of such control measures.
 
 Stakeholders <br>
 
