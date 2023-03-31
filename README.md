@@ -54,14 +54,17 @@ Stakeholders <br>
 ## Dataset
 There are 11 weather datasets included in the [`datasets`](./datasets/) folder for this project. These correponds to rainfall, sunshine, humidity, and temperature information. 
 
-* [`rainfall-monthly-highest-daily-total.csv`](./data/rainfall-monthly-highest-daily-total.csv): Monthly highest total daily rainfall from 1982 to 2023, measured in milimeters(mm).
-* [`rainfall-monthly-number-of-rain-days.csv`](./data/rainfall-monthly-number-of-rain-days.csv): Monthly number of rain days from 1982 to 2023. A day is considered to have “rained” if the total rainfall for that day is 0.2mm or more.
-* [`rainfall-monthly-total.csv`](./data/rainfall-monthly-total.csv): Monthly total rain recorded in mm(millimeters) from 1982 to 2023.
-* [`sunshine-duration-monthly-mean-daily-duration`](./data/sunshine-duration-monthly-mean-daily-duration.csv): Mean sunshine hours per month from 1982 to 2023, measured in hours (hrs).
-* [`relative-humidity-monthly-mean`](./data/relative-humidity-monthly-mean.csv): Mean relative humidity per month from 1982 to 2023, measured in percentage(%).
-* [`surface-air-temperature-annual-mean-daily-minimum`](./data/surface-air-temperature-annual-mean-daily-minimum.csv): Mean daily minimum surface air temperature per year from 1982 to 2023, measure in degrees Celsius(°C).
-* [`surface-air-temperature-monthly-mean-daily-minimum`](./data/surface-air-temperature-monthly-mean-daily-minimum.csv): Mean daily minimum surface air temperature per month from 1982 to 2023, measure in degrees Celsius(°C).
-* [`wet-bulb-temperature-hourly.csv`](./data/wet-bulb-temperature-hourly.csv): Hourly wet bulb temperature in degrees Celcius(°C) at 100% relative humidity from 1982 to 2023.
+* [`rainfall-monthly-highest-daily-total.csv`](./datasets/rainfall-monthly-highest-daily-total.csv): Monthly highest total daily rainfall from 1982 to 2023, measured in milimeters(mm).
+* [`rainfall-monthly-number-of-rain-days.csv`](./datasets/rainfall-monthly-number-of-rain-days.csv): Monthly number of rain days from 1982 to 2023. A day is considered to have “rained” if the total rainfall for that day is 0.2mm or more.
+* [`rainfall-monthly-total.csv`](./datasets/rainfall-monthly-total.csv): Monthly total rain recorded in mm(millimeters) from 1982 to 2023.
+* [`sunshine-duration-monthly-mean-daily-duration`](./datasets/sunshine-duration-monthly-mean-daily-duration.csv): Mean sunshine hours per month from 1982 to 2023, measured in hours (hrs).
+* [`relative-humidity-monthly-mean`](./datasets/relative-humidity-monthly-mean.csv): Mean relative humidity per month from 1982 to 2023, measured in percentage(%).
+* [`surface-air-temperature-annual-mean-daily-minimum`](./datasets/surface-air-temperature-annual-mean-daily-minimum.csv): Mean daily minimum surface air temperature per year from 1982 to 2023, measure in degrees Celsius(°C).
+* [`surface-air-temperature-monthly-mean-daily-minimum`](./datasets/surface-air-temperature-monthly-mean-daily-minimum.csv): Mean daily minimum surface air temperature per month from 1982 to 2023, measure in degrees Celsius(°C).
+* [`surface-air-temperature-annual-mean-daily-maximum`](./datasets/surface-air-temperature-annual-mean-daily-maximum.csv): Mean daily maximum surface air temperature per year from 1982 to 2023, measure in degrees Celsius(°C).
+* [`surface-air-temperature-monthly-mean-daily-maximum`](./datasets/surface-air-temperature-monthly-mean-daily-maximum.csv): Mean daily maximum surface air temperature per month from 1982 to 2023, measure in degrees Celsius(°C).
+* [`surface-air-temperature-monthly-mean`](./datasets/surface-air-temperature-monthly-mean.csv): Mean daily surface air temperature per month from 1982 to 2023, measure in degrees Celsius(°C).
+* [`wet-bulb-temperature-hourly.csv`](./datasets/wet-bulb-temperature-hourly.csv): Hourly wet bulb temperature in degrees Celcius(°C) at 100% relative humidity from 1982 to 2023.
 
 Dengue Infection Rate and Serology Data <br>
 (yada yada)
