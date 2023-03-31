@@ -52,7 +52,7 @@ Stakeholders <br>
 
 ----
 ## Dataset
-There are 8 weather datasets included in the [`data`](./data/) folder for this project. These correponds to rainfall, sunshine, humidity, and temperature information. 
+There are 11 weather datasets included in the [`datasets`](./datasets/) folder for this project. These correponds to rainfall, sunshine, humidity, and temperature information. 
 
 * [`rainfall-monthly-highest-daily-total.csv`](./data/rainfall-monthly-highest-daily-total.csv): Monthly highest total daily rainfall from 1982 to 2023, measured in milimeters(mm).
 * [`rainfall-monthly-number-of-rain-days.csv`](./data/rainfall-monthly-number-of-rain-days.csv): Monthly number of rain days from 1982 to 2023. A day is considered to have “rained” if the total rainfall for that day is 0.2mm or more.
