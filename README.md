@@ -69,6 +69,10 @@ Google Trends Data:  <br>
 (yada 
 yada)
 
+Cost Data: <br> 
+(yada
+yada) 
+
 ----
 ## Technical Report
 
