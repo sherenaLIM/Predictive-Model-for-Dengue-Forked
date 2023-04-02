@@ -16,11 +16,13 @@
 
 Introduction <br>
 
-Dengue virus is most commonly spread to humans through infected mosquitos. Dengue can range from asymptomatic infection or mild illness to severe disease. An estimated 1 in 4 dengue virus infections are symptomatic. Symptomatic dengue virus infection most commonly presents as a mild to moderate, nonspecific, acute febrile illness. Approximately 1 in 20 patients with dengue virus disease progress to develop severe, life-threatening disease called severe dengue. The second infection with DENV is a risk factor for severe dengue. Severe dengue can be life-threatening within a few hours and often requires care at a hospital.
+Dengue virus is most commonly spread to humans through infected mosquitos. Dengue can range from asymptomatic infection or mild illness to severe disease. An estimated 1 in 4 dengue virus infections are symptomatic. Symptomatic dengue virus infection most commonly presents as a mild to moderate, nonspecific, acute febrile illness. Approximately 1 in 20 patients with dengue virus disease progress to develop severe, life-threatening disease called severe dengue. The second infection with DENV is a risk factor for severe dengue. Severe dengue can be life-threatening within a few hours and often requires care at a hospital. All four dengue virus (DENV) types (DENV-1, DENV-2, DENV-3, and DENV-4) are capable of inducing severe disease (dengue hemorrhagic fever [DHF] / dengue shock syndrome [DSS]).
 
-Singapore launched a comprehensive nationwide programme in 1968 targeting the Aedes mosquito, the main mosquito vector of dengue. This control programme combines environmental management, source reduction, public health education and law enforcement. Since then, the number of homes found to be breeding Aedes mosquito fell sharply and remains low.
+Singapore launched a comprehensive nationwide programme in 1968 targeting the Aedes mosquito, the main mosquito vector of dengue. This control programme combines environmental management, source reduction, public health education and law enforcement. Since then, the number of homes found to be breeding Aedes mosquito fell sharply and remains low. 
 
-However, Dengue remains endemic in Singapore. Since the 1990s, there have been periodic spikes in cases occurring in five- to six-year cycles. The spike in 2019 and 2020 could be a case in point, coming after the epidemics in 2013 and 2014, which saw over 22,000 and 18,000 cases respectively. 
+In 2016, Singapore embarked on a multi-phased field study named Project Wolbachia. Project Wolbachia involves the release of male mosquitoes infected with the Wolbachia bacteria. When these specially bred mosquitoes mate with urban female Aedes aegypti that do not carry Wolbachia, their resulting eggs do not hatch.
+
+Despite concerted efforts, Dengue remains endemic in Singapore. Since the 1990s, there have been periodic spikes in cases occurring in five- to six-year cycles. The spike in 2019 and 2020 could be a case in point, coming after the epidemics in 2013 and 2014, which saw over 22,000 and 18,000 cases respectively. 
 
 Several theories have been proposed to explain this cyclical pattern. <br> 
 > 1. The dengue virus has four different serotypes, and a switch in the predominant virus serotype has been a historical precursor of dengue epidemics in Singapore. For example, two large epidemics, each stretching over two years in 2004–2005 and 2013–2014, were associated with a switch in the main dengue virus serotype from serotype 2 to serotype 1.
@@ -54,8 +56,11 @@ Stakeholders <br>
 ## Dataset
 
 Dengue Infection Rate and Serology Data:  <br>
-(yada 
-yada)
+* [Number of Dengue cases from 2018 to 2020](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2020/weekly-infectious-diseases-bulletin)<br>
+* [Number of Dengue cases in 2021](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2021)<br>
+* [Number of Dengue cases in 2022](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2022)<br>
+* [Number of Dengue cases in 2023](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2023/weekly-infectious-diseases-bulletin)<br>
+* [Serology data for Dengue between 2018 to 2023](https://www.nea.gov.sg/dengue-zika/dengue/quarterly-dengue-surveillance-data)<br>
 
 Climate Data (1980 - 2023, planning area included): <br> 
 (yada
