@@ -54,8 +54,11 @@ Stakeholders <br>
 ## Dataset
 
 Dengue Infection Rate and Serology Data:  <br>
-(yada 
-yada)
+* [Number of Dengue cases from 2018 to 2020](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2020/weekly-infectious-diseases-bulletin)<br>
+* [Number of Dengue cases in 2021](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2021)<br>
+* [Number of Dengue cases in 2022](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2022)<br>
+* [Number of Dengue cases in 2023](https://www.moh.gov.sg/resources-statistics/infectious-disease-statistics/2023/weekly-infectious-diseases-bulletin)<br>
+* [Serology data for Dengue between 2018 to 2023](https://www.nea.gov.sg/dengue-zika/dengue/quarterly-dengue-surveillance-data)<br>
 
 Climate Data (1980 - 2023, planning area included): <br> 
 (yada
