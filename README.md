@@ -16,7 +16,7 @@
 
 Introduction <br>
 
-Dengue virus is most commonly spread to humans through infected mosquitos. Dengue can range from asymptomatic infection or mild illness to severe disease. An estimated 1 in 4 dengue virus infections are symptomatic. Symptomatic dengue virus infection most commonly presents as a mild to moderate, nonspecific, acute febrile illness. Approximately 1 in 20 patients with dengue virus disease progress to develop severe, life-threatening disease called severe dengue. All four dengue virus (DENV) types (DENV-1, DENV-2, DENV-3, and DENV-4) are capable of inducing severe disease (dengue hemorrhagic fever [DHF] / dengue shock syndrome [DSS]).
+Dengue virus is most commonly spread to humans through infected mosquitos. Dengue can range from asymptomatic infection or mild illness to severe disease. An estimated 1 in 4 dengue virus infections are symptomatic. Symptomatic dengue virus infection most commonly presents as a mild to moderate, nonspecific, acute febrile illness. Approximately 1 in 20 patients with dengue virus disease progress to develop severe, life-threatening disease called severe dengue. Severe disease (dengue hemorrhagic fever [DHF] / dengue shock syndrome [DSS]) can be induced by all four dengue virus (DENV) types (DENV-1, DENV-2, DENV-3, and DENV-4).
 
 Singapore launched a comprehensive nationwide programme in 1968 targeting the Aedes mosquito, the main mosquito vector of dengue. This control programme combines environmental management, source reduction, public health education and law enforcement. Since then, the number of homes found to be breeding Aedes mosquito fell sharply and remains low. 
 
