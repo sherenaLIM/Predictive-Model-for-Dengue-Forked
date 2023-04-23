@@ -29,10 +29,16 @@ Several theories have been proposed to explain this cyclical pattern. <br>
 > 2. Dengue in Singapore typically rises in warmer months, from April, peaking in July or August, before declining in September or October. Abnormal climate changes, such as the El Niño weather phenomenon, may affect the mosquito breeding environment, accelerate the life-cycle of Aedes mosquito, shorten the incubation period of the dengue virus and drive up cases. El Nino, a recurring weather pattern related to the warming of surface waters in the Pacific Ocean, last occurred in 2015–2016. It is slated to resume in 2023. 
 > 3. Population factors also contribute to this endemic. The decrease in dengue transmission due to the successful implementation of the Aedes control programme in the 1970s and 1980s reduced incidence of dengue infection in the population. As herd immunity to dengue is consequently low, a large proportion of the Singapore resident population today remains susceptible to infection by any of the four dengue serotypes.
 
+The entire lifecycle of an aedes female mosquito spans for about 42-56 days: <br>
+<div>
+<img src="images/mosquito_chain.png" width="300"/>
+</div>
+
 References <br> 
 > * Centers for Disease Control and Prevention, National Center for Emerging and Zoonotic Infectious Diseases (NCEZID), Division of Vector-Borne Diseases (DVBD); url: https://www.cdc.gov/dengue/symptoms/index.html
 > * National Centre for Infectious Diseases (2023). url: https://www.ncid.sg/Health-Professionals/Articles/Pages/Rise-in-dengue-cases-underscores-need-for-constant-vigilance.aspx#:~:text=Singapore%20is%20in%20the%20midst,the%202%2C772%20cases%20in%202017.
 > * Meteorological Service Singapore (2023). url: http://www.weather.gov.sg/climate-el-la/
+> * Mosquitos and Mosquito Borne diseases (NEA). url: https://www.nea.gov.sg/docs/default-source/resource/section-a---mosquitoes-amp-mosquito-borne-diseases-pdf-1-41-mb-.pdf
 ----
 
 ## Problem Statement
@@ -63,20 +69,56 @@ Dengue Infection Rate and Serology Data:  <br>
 * [Serology data for Dengue between 2018 to 2023](https://www.nea.gov.sg/dengue-zika/dengue/quarterly-dengue-surveillance-data)<br>
 
 Climate Data (1980 - 2023, planning area included): <br> 
-(yada
-yada)
+* [Daily historical climate data 1980 to 2023](http://www.weather.gov.sg/climate-historical-daily)<br>
 
 Geospatial Data:  <br> 
-(yada 
-yada)
+* [Weekly geospatial dengue cluster data 2015 to 2020](https://outbreak.sgcharts.com/)
 
 Google Trends Data:  <br>
-(yada 
-yada)
+* [Weekly Google Trends data for dengue 2018 to 2023](https://trends.google.com/trends/explore?date=today%205-y&geo=SG&q=repellent%20%2B%20dengue%20fever%20%2B%20Dengue%20cluster%20%2B%20mosquito%20%2B%20mosquito%20repellent%20%2B%20dengue%20%2B%20aedes&hl=en)
 
 Cost Data: <br> 
 (yada
 yada) 
+
+## Data Dictionary
+**Climate, serology and google search Data Dictionary**
+|Variable|Description|Data type|
+|--|--|--|
+|time|Date of the dengue data, taken at sunday of every week from 2018 to 2023|datetime|
+|dengue_cases|Weekly total number of dengue cases in NEA Weekly Infectious Diseases Bulletin|int|
+|denv_1|Weekly percentage of dengue cases belonging to serotype DENV_1 obtained by NEA dengue surveillance|float|
+|denv_2|Weekly percentage of dengue cases belonging to serotype DENV_2 obtained by NEA dengue surveillance|float|
+|denv_3|Weekly percentage of dengue cases belonging to serotype DENV_3 obtained by NEA dengue surveillance|float|
+|denv_4|Weekly percentage of dengue cases belonging to serotype DENV_4 obtained by NEA dengue surveillance|float|
+|Mean Temperature (°C)|Weekly average temperature in °C in Changi from 1980 to 2023 |float|
+|Mean Wind Speed (km/h)|Weekly average wind speed in km/h in Changi from 1980 to 2023 |float|
+|Daily Rainfall Total (mm)|Weekly averaged daily total rainfall in millimeters in Changi from 1980 to 2023 |float|
+|Maximum Temperature (°C)|Weekly highest temperature in °C in Changi from 1980 to 2023 |float|
+|Max Wind Speed (km/h)|Weekly highest wind speed in km/h in Changi from 1980 to 2023 |float|
+|Minimum Temperature (°C)|Weekly lowest temperature in °C in Changi from 1980 to 2023 |float|
+|google_trends|Weekly number of searches for dengue related terms in Singapore scaled on a range of 0 to 100|int|
+    
+**Geospatial Data Dictionary**
+
+|Region|latitude|logitude|
+|--|--|--|
+|CENTRAL REGION|103.8404361073424| 1.354955429489439|
+|EAST REGION|103.9633839670078| 1.32796829772857|
+|NORTH REGION|103.8371178947091| 1.415039440959387|
+|NORTH-EAST REGION|103.8678180616185| 1.365201551765161|
+|WEST REGION|103.7049024145101| 1.341611988409421|
+
+<br>
+
+|Variable|Description|Data type|
+|--|--|--|
+|date|Date of the cluster data from 2015 to 2020 from NEA |datetime|
+|recent_cases_in_cluster_central|Weekly sum of average dengue cases (onset in the last 2 weeks) of clusters in central region of Singapore from 2015 to 2020|int|
+|recent_cases_in_cluster_east|Weekly sum of average dengue cases (onset in the last 2 weeks) of clusters in East region of Singapore from 2015 to 2020|int|
+|recent_cases_in_cluster_north|Weekly sum of average dengue cases (onset in the last 2 weeks) of clusters in North region of Singapore from 2015 to 2020|int|
+|recent_cases_in_cluster_north-east|Weekly sum of average dengue cases (onset in the last 2 weeks) of clusters in Nort-East region of Singapore from 2015 to 2020|int|
+|recent_cases_in_cluster_west|Weekly sum of average dengue cases (onset in the last 2 weeks) of clusters in West region of Singapore from 2015 to 2020|int|
 
 ----
 ## Technical Report
