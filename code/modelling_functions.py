@@ -123,10 +123,10 @@ def train_test_plot(train, test, pred=None, title=None):
     train: pandas DataFrame
         train dataset, index should be datetime
         
-    test: pandas DataFrame
+    test: pandas DataFrame or pandas Series
         test dataset, index should be datetime
         
-    preds: pandas DataFrame
+    preds: pandas DataFrame or pandas Series
         predicted dataset, index should be datetime and same as test dataset
         default = None, i.e. will not be plotted
         
@@ -145,7 +145,7 @@ def train_test_plot(train, test, pred=None, title=None):
     plt.plot(train[['dengue_cases']], c='blue')
     plt.plot(test[['dengue_cases']], c='orange')
     
-    if isinstance(pred, pd.DataFrame):
+    if isinstance(pred, pd.DataFrame) or isinstance(pred, pd.Series):
         plt.plot(pred, c='green')
         plt.legend(['train', 'test', 'predicted'])
     else:
@@ -369,3 +369,121 @@ def test_rf_model_defunc(data, test_year, vars_lag, num_lag, rf_params, y_var='d
     results['mape_test'] = mean_absolute_percentage_error(test[y_var], preds_test)
     
     return results
+
+def evaluate_model(y_real, y_pred):
+    '''
+    Function that returns the root mean squared error of the model with other statistics
+    
+    Paramters:
+    ----------
+    y_real: pandas DataFrame or pandas Series
+        real dengue cases
+        
+    y_pred: pandas DataFrame or pandas Series
+        predicted dengue cases
+        
+    Returns:
+    --------
+    float
+        rmse
+        
+    '''
+    # compute rmse
+    error = mean_squared_error(y_real, y_pred, squared=False)
+    
+    print(f'RMSE: {error}\n')
+    print(f'Minimum Dengue Cases: {round(y_real.min(),0)}')
+    print(f'Maximum Dengue Cases: {round(y_real.max(),0)}')
+
+    print(f'RMSE relative to minimum values in dengue cases: {round(error / y_real.min(),2)}.')
+    print(f'RMSE relative to maximum values in dengue cases: {round(error / y_real.max(),2)}.')
+    
+    return error
+
+def plot_residuals(y_real, y_pred, title=None):
+    '''
+    Function that plots the residuals of the model
+    
+    Paramters:
+    ----------
+    y_real: pandas DataFrame or pandas Series
+        real dengue cases
+        
+    y_pred: pandas DataFrame or pandas Series
+        predicted dengue cases
+        
+    title: str
+        title of the plot
+        default = None
+        
+    Returns:
+    --------
+    pandas Series
+        residual values
+        
+    '''
+    # Calculate residuals.
+    resids = pd.Series(y_real.values - y_pred.values, index=y_real.index)
+    
+    # scatterplot of residuals
+    plt.figure(figsize=(15,5))
+    plt.scatter(resids.index, resids, c='red')
+    plt.hlines(y=0,
+               xmin=y_real.index.min(),
+               xmax=y_real.index.max(),
+               linestyles='--'
+              )
+    plt.xticks(fontsize=14)
+    plt.xlim(y_real.index.min(), y_real.index.max())
+    plt.yticks(fontsize=14)
+    plt.ylabel('Residuals', fontsize=14)
+    
+    if not (title == None):
+        plt.title(title, fontsize=20)
+        
+    return resids
+
+
+def lead_data(data, y_var='dengue_cases', weeks=0):
+    '''
+    Function that leads the outcome variable by the specific number of weeks and removes the NA rows
+    
+    Parameters:
+    -----------
+    data: pandas DataFrame
+        data to be processed, make sure y_var is a column in data
+        
+    y_var: str
+        column to be led
+        default = dengue_cases
+        
+    weeks: int
+        number of weeks to be led
+        default = 0, i.e. data will not be led
+        
+    Returns:
+    --------
+    pandas DataFrame
+        a copy of the original DataFrame with the y_var led
+        
+    '''
+    
+    # copy data
+    output = data.copy()
+    
+    # lead the required variable
+    output[y_var] = output[y_var].shift(-1*weeks)
+    
+    # remove NAs
+    output.dropna(inplace=True)
+    
+    return output
+
+
+def get_date_index(week, year):
+    '''
+    Function that obtains the date index of the x-th week of the y-th year as defined by the user
+    '''
+    from datetime import datetime
+    
+    return datetime.strptime(str(year) + '-' + str(week) + '-0', '%Y-%U-%w')
