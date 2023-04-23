@@ -63,7 +63,7 @@
 <img src="../images/rain_monthly_boxplot.png" width="1000"/>
 </div>
 
-> April to September are the hottes months, and 2016 and 2019 are the hottest years recently <br>
+> April to September are the hottest months, and 2016 and 2019 are the hottest years recently <br>
 <div>
 <img src="../images/temp_heatmap.png" width="1000"/>
 </div>
@@ -95,10 +95,16 @@
 <img src="../images/dengue_box.png" width="500"/>
 </div>
 
-> Dengue cases matches the spikes and fluctuations in google trends
+> Dengue cases matches the spikes and fluctuations in google trends. 
+> Comparison of decomposition of trends and seasons side-by-side shows same spike in july each year.
 <div>
 <img src="../images/dengue_google_line.png" width="500"/>
 </div>
+<div>
+<img src="../images/dengue_decomp.png" width="500"/>
+<img src="../images/google_decomp.png" width="500"/>
+</div>
+
 
 > DENV_3 is the dominant strain from 2021 onwards, but the percentage is falling in 2023.
 > DENV_2 percentage has dropped significantly since 2021 due to herd immunity.
@@ -109,13 +115,19 @@
 >Google trends have the highest pearson correlation at time lag of 0 weeks <br>
 >Mean temperature have consistent correlation at positive time lag of 0-10 weeks <br>
 >Mean wind spead have some correlation at positive time lag of 20 weeks <br>
->Rainfall has some correlation at negative time lag of 20 weeks <br>
+>Rainfall has some correlation at negative time lag of 20 weeks, and some  <br>
 >Maximum temperature have higher correlation at positive time lag of 10 weeks <br>
 <div>
 <img src="../images/corr_lag.png" width="1000"/>
 </div>
 
-3. Costs
+> Mean temperature have 0 to 10 weeks time lag, which is explained as yearly, the rise in temperature begins in April, which is around 2-3 months earlier than rise in dengue cases. The peak in temperature coincides with the peak in dengue cases. <br>
+> However, the lag in rainfall is not consistent from the chart.
+<div>
+<img src="../images/temp_dengue_line.png" width="500"/>
+<img src="../images/rain_dengue_line.png" width="500"/>
+</div>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
