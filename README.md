@@ -93,7 +93,7 @@ yada)
 |denv_4|Weekly percentage of dengue cases belonging to serotype DENV_4 obtained by NEA dengue surveillance|float|
 |Mean Temperature (°C)|Weekly average temperature in °C in Changi from 1980 to 2023 |float|
 |Mean Wind Speed (km/h)|Weekly average wind speed in km/h in Changi from 1980 to 2023 |float|
-|Daily Rainfall Total (mm)|Weekly total rainfall in millimeters in Changi from 1980 to 2023 |float|
+|Daily Rainfall Total (mm)|Weekly averaged daily total rainfall in millimeters in Changi from 1980 to 2023 |float|
 |Maximum Temperature (°C)|Weekly highest temperature in °C in Changi from 1980 to 2023 |float|
 |Max Wind Speed (km/h)|Weekly highest wind speed in km/h in Changi from 1980 to 2023 |float|
 |Minimum Temperature (°C)|Weekly lowest temperature in °C in Changi from 1980 to 2023 |float|
