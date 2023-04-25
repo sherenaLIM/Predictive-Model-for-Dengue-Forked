@@ -1,6 +1,7 @@
 from copy import deepcopy
 import pandas as pd
 from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import GridSearchCV
 
 class DengueModel():
     '''
@@ -8,7 +9,7 @@ class DengueModel():
     
     '''
     
-    def __init__(self, models, weeks=1):
+    def __init__(self, models, searchgrid=None, weeks=1):
         '''
         Method to instantiate object
         
@@ -31,6 +32,14 @@ class DengueModel():
         '''
         # store a list of models that will be fitted for each week forecast
         self.model_list = models
+        
+        # set default value of tuning to False
+        self.tuning = False
+        
+        # check if searchgrid is filled, if it is, active hyperparameter tuning
+        if not (searchgrid == None):
+            self.searchgrid = searchgrid
+            self.tuning = True
         
         # create dictionary of selected models for each week forecast
         model_keys = ['model_'+str(i)+'w' for i in range(1, weeks+1)]
@@ -66,8 +75,27 @@ class DengueModel():
             # for each model in model_list, fit and get rmse
             rmse_best = 1e10
             #model_best = None
-            for model_trial in self.model_list.values():
-                model_trial.fit(X_train, y_train)
+            for model_trial, param_grid in zip(self.model_list.values(), self.searchgrid.values()):
+                # check if tuning is true, if so, run GridSearchCV
+                if self.tuning == True:
+                    # reset index of data for fixed train and cross-validation setting for RandomizedSearchCV (weird issue: it cannot handle datetime dtype index)
+                    data_temp = data_week.copy()
+                    data_idx = data_temp.index
+                    data_temp.reset_index(inplace=True)
+                    data_temp.drop(columns='time', inplace=True)
+
+                    # create fixed indices for train and cross-validation sets
+                    train_idx = list(range((data_idx.year < test_year).sum()))
+                    val_idx = list(range((data_idx.year < test_year).sum(), len(data_idx)))
+                    
+                    # define and fit model
+                    grid_search = GridSearchCV(model_trial, param_grid, cv=[(train_idx, val_idx)], scoring='neg_root_mean_squared_error', n_jobs=-1)
+                    grid_search.fit(data_temp.drop(columns='dengue_cases'), data_temp['dengue_cases'])
+                    
+                    model_trial = grid_search.best_estimator_
+                else:
+                    model_trial.fit(X_train, y_train)
+                    
                 rmse = mean_squared_error(y_test, model_trial.predict(X_test), squared=False)
                 
                 if rmse < rmse_best:
