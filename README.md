@@ -123,52 +123,50 @@ yada)
 ----
 ## Technical Report
 
-The technical report is split into X parts in the `code` folder.
+The technical report is split into 4 parts in the `code` folder.
 
-1.
-2.
-3.
-4.
+1. [`01_data_preparation.ipynb`](./code/01_data_preparation.ipynb): A Jupyter notebook that cleans and merges the datasets, conducts Exploratory Data Analysis (EDA) on the dataset and exports the [`merged_df2.csv`](./datasets/merged_df2.csv) dataset into the `datasets` folder.
+2. [`02_feature_engineering.ipynb`](./code/02_feature_engineering.ipynb): A Jupyter notebook that focuses on engineering relevant features based on the prelim analysis of the dataset and exports the [`data_features_with_lags.csv`](./datasets/data_features_with_lags.csv) into the `datasets` folder.
+3. [`03_preprocessing_and_modelling.ipynb`](./code/03_preprocessing_and_modelling.ipynb): A Jupyter notebook that focuses on fitting the proposed models on a 1-week look ahead prediction and assessing the performance of each model using RMSE.
+4. [`04_model_fitting_and_evaluation.ipynb`](./code/04_model_fitting_and_evaluation.ipynb): A Jupyter notebook that takes the best model families to fit up to 16-week ahead prediction to obtain the production model, and discusses the business evaluation of the model.
 
-In addition to the Jupyter notebooks, there are X python scripts that contain user-defined functions to aid in the data cleaning and analysis.
+In addition to the Jupyter notebooks, there are 2 python scripts that contain user-defined functions to aid in the data cleaning and analysis.
 
-1.
-2.
+1. [`modelling_functinos.py`](./code/modelling_functinos.py): user-defined functions for repeated actions in the notebooks.
+2. [`DengueModel.py`](./code/DengueModel.py): user-defined class for building and running the 16-week lookahead model.
+ 
 
 ----
 ## Findings and Conclusions
 
-**Cost Benefit Analysis** <br>
-There are currently various measures deployed in Singapore to control the dengue cases, which can be categorized into reactive and preventive measures.
-* Reactive Measures: Distribution of mosquito repellent, fogging
-* Preventive Measures: Home inspections, anti-dengue campaigns, gravi-traps, project wolbachia
+### Performance Metric
 
-For our project, we will be focusing on the cost and benefit of Project Wolbachia.<br>
-*Economic Impact of Dengue* <br>
-* Over $1 Billion annually between 2010 to 2020
-* For years with huge spikes like 2020 and 2022, the expected economic impact is much higher
+Based on the business requirement of predicting the number of dengue cases 16 weeks into the future, the root mean squared error (**RMSE**) is chosen as the performance metric. NEA and MOH are likely to make decisions based on the predicted absolute number of dengue cases, as such the accuracy of the absolute number predicted is vital. Minimising the RMSE directly enhances the accuracy of the prediction of the absolute number of dengue cases, as compared to other metrics like percentage error which will have a non-linear relationship with actual case numbers depending on the number of cases at that point in time.
 
-*Project Wolbachia* <br>
-* Nation-wide deployment throughout the year is expected to cost approx. $108 Million
-* A reduction of up to 88% of dengue cases is observed before deployment of Project Wolbachia
-* Effectiveness of the project is not dependent on people compared to other measures, which replies on the population's due diligence to contain dengue mosquitos
-* Requires 3 - 4 months to suppress mosquito population
+### Model Selection
 
-*Cost Savings from Project Wolbachia* <br>
-The expected savings from a year-round deployment of Project Wolbachia is approx. SGD 770 Mil. 
+As a start, 4 model families were trained for a 1-week look ahead prediction of dengue cases on data between 2019 and 2021. Then the models are validated on 2022 data to assess their performance. Prelim evaluation of the model families (see table below) shows that Boosting, Decision Trees and Support Vector perform well even without any hyperparameter tuning. In contrast, Time Series models have similar, if not worse, performance even after tuning. This also suggests that the seasonality of dengue cases may not be as consistent as a Time Series model can handle and/or historical training data is insufficient to fully understand and tune the seasonanlity components.
 
-**Conclusion** <br>
-1. The model is able to perform well in terms of identifying the trend. Furthermore, its error rate is relatively low, with an RMSE score of 91. 
-2. The model will serve well as an early detection tool, where the approximate measure can be implemented based on whether a minor or major spike is predicted. 
-    * Minor Spikes: Use existing dengue measures
-    * Major Spikes: Deploy Project Wolbachia
-3. We would also recommend to deploy Project Wolbachia nationally throughout the year, to reduce the number of dengue cases and help meet NEA's KPI of reducing the weekly case load to under 100. Furthermore, based on our CBA, a cost savings of over $700 Million is achieved.
+| Model Family | Model | RMSE |
+|-----|-----|:-----:|
+| Time Series | ARIMA (3,1,0) | 617 |
+| Time Series | ARIMAX (1,1,2) | 262 |
+| Time Series | SARIMA (1,1,2)(1,1,0,51) | 359 |
+| Time Series | SARIMAX (1,1,2)(1,1,0,48) | 102 |
+| Boosting | Gradient Boosting | 176 |
+| Decision Trees | Bagging | 207 |
+| Decision Trees | Random Forest | 192 |
+| Support Vector | Support Vector Machine | 141 |
 
-**Future Improvements** <br>
-We would also recommend the following improvements for the future:
-1. To increase our data collected
-    * Town level dengue cases: By collecting the town level dengue cases, we will be able to be more targeted with the deployment of Project Wolbachia, which would significantly reduce its cost
-    * Age group of populations in town: Older generations are more susceptible to severe disease. By having this data, towns with more susceptible populatiosn can be prioritized if resources are lean. 
-    * More historical data: Having more historical data would be helpful with training a more accurate model
-2. Engage domain experts
-    * Domain experts wil be able to use their in-depth knowledge and expertise to assist with feature selection and feature engineering. 
+### Model Tuning and Evaluation
+
+To forecast 16 weeks ahead from the current time, we use current data and fit one dedicated model for each week’s forecast (see illustration below). The dedicated model is chosen from the best performing of the 3 model families after hyperparameter tuning.
+<br>
+<img src="./images/model_design.png" style="float: left; margin: 20px; height: 220px">
+
+Visually, the 16-week ahead forecasting model performs very well at 3 randomly selected time points in the 2022 validation dataset. RMSE on the dataset is **103** which is also very good. When the model is tested on unseen 2023 data (10 weeks worth), the performance is even better at RMSE of **13**. We will deploy this model to address the problem statement. 
+<br>
+<img src="./images/16-week forecast.png" style="float: left; margin: 20px; height: 300px">
+
+One observation is that predictions start to deviate from actual cases after 10 weeks, which is symptomatic of how the RMSE for the first 10 weeks is very low (i.e. ~10), but overall RMSE is a magnitude (i.e. ~100). We will discuss improvements to the model in the latter sections.
+ 
