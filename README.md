@@ -7,8 +7,7 @@
     
 **Primary Objectives:**
 
-1. yada yada
-2. yada yada
+1. Build a predictive model to address the problem statement of when should the National Environment Agency (NEA) and Ministry of Health (MOH) allocate resources for dengue control more effectively?
 
 ----
 
@@ -45,7 +44,7 @@ References <br>
 
 Problem Statement <br>
 
-Given infection and serology, climate, geospatial, and google trends data, you have been tasked to predict the national-level dengue cases 2 weeks into the future. A more accurate method of predicting outbreaks of Dengue virus in mosquitos will help MOH plan when and where to allocate resources for dengue control more effectively. If cases are expected to rise sharply, there is a need to plan for more intensive control and enforcement measures to reduce mosquito breeding and consequentially dengue cases. Also quantify the costs and benefits of such control measures.
+Given infection and serology, climate, geospatial, and google trends data, you have been tasked to predict the national-level dengue cases 16 weeks into the future. A more accurate method of predicting outbreaks of Dengue virus in mosquitos will help NEA and MOH plan when and where to allocate resources for dengue control more effectively. If cases are expected to rise sharply, there is a need to plan for more intensive control and enforcement measures to reduce mosquito breeding and consequentially dengue cases. Also quantify the costs and benefits of such control measures.
 
 Stakeholders <br>
 
@@ -191,7 +190,9 @@ For our project, we will be focusing on the cost and benefit of Project Wolbachi
 *Cost Savings from Project Wolbachia* <br>
 The expected savings from a year-round deployment of Project Wolbachia is approx. SGD 770 Mil. 
 
-### Conclusion
+----
+
+## Conclusion
 
 1. The model is able to perform well in terms of identifying the trend. Furthermore, its error rate is relatively low, with an RMSE score of 91. 
 2. The model will serve well as an early detection tool, where the approximate measure can be implemented based on whether a minor or major spike is predicted. 
@@ -199,7 +200,8 @@ The expected savings from a year-round deployment of Project Wolbachia is approx
     * Major Spikes: Deploy Project Wolbachia
 3. We would also recommend to deploy Project Wolbachia nationally throughout the year, to reduce the number of dengue cases and help meet NEA's KPI of reducing the weekly case load to under 100. Furthermore, based on our CBA, a cost savings of over $700 Million is achieved.
 
-**Future Improvements** <br>
+### Future Improvements
+
 We would also recommend the following improvements for the future:
 1. To increase our data collected
     * Town level dengue cases: By collecting the town level dengue cases, we will be able to be more targeted with the deployment of Project Wolbachia, which would significantly reduce its cost
