@@ -138,4 +138,37 @@ In addition to the Jupyter notebooks, there are X python scripts that contain us
 ----
 ## Findings and Conclusions
 
-yada yada
+**Cost Benefit Analysis** <br>
+There are currently various measures deployed in Singapore to control the dengue cases, which can be categorized into reactive and preventive measures.
+* Reactive Measures: Distribution of mosquito repellent, fogging
+* Preventive Measures: Home inspections, anti-dengue campaigns, gravi-traps, project wolbachia
+
+For our project, we will be focusing on the cost and benefit of Project Wolbachia.<br>
+*Economic Impact of Dengue* <br>
+* Over $1 Billion annually between 2010 to 2020
+* For years with huge spikes like 2020 and 2022, the expected economic impact is much higher
+
+*Project Wolbachia* <br>
+* Nation-wide deployment throughout the year is expected to cost approx. $108 Million
+* A reduction of up to 88% of dengue cases is observed before deployment of Project Wolbachia
+* Effectiveness of the project is not dependent on people compared to other measures, which replies on the population's due diligence to contain dengue mosquitos
+* Requires 3 - 4 months to suppress mosquito population
+
+*Cost Savings from Project Wolbachia* <br>
+The expected savings from a year-round deployment of Project Wolbachia is approx. SGD 770 Mil. 
+
+**Conclusion** <br>
+1. The model is able to perform well in terms of identifying the trend. Furthermore, its error rate is relatively low, with an RMSE score of 91. 
+2. The model will serve well as an early detection tool, where the approximate measure can be implemented based on whether a minor or major spike is predicted. 
+    * Minor Spikes: Use existing dengue measures
+    * Major Spikes: Deploy Project Wolbachia
+3. We would also recommend to deploy Project Wolbachia nationally throughout the year, to reduce the number of dengue cases and help meet NEA's KPI of reducing the weekly case load to under 100. Furthermore, based on our CBA, a cost savings of over $700 Million is achieved.
+
+**Future Improvements** <br>
+We would also recommend the following improvements for the future:
+1. To increase our data collected
+    * Town level dengue cases: By collecting the town level dengue cases, we will be able to be more targeted with the deployment of Project Wolbachia, which would significantly reduce its cost
+    * Age group of populations in town: Older generations are more susceptible to severe disease. By having this data, towns with more susceptible populatiosn can be prioritized if resources are lean. 
+    * More historical data: Having more historical data would be helpful with training a more accurate model
+2. Engage domain experts
+    * Domain experts wil be able to use their in-depth knowledge and expertise to assist with feature selection and feature engineering. 
