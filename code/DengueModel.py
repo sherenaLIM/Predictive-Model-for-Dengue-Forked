@@ -56,6 +56,9 @@ class DengueModel():
         '''
         # for each week ahead, we fit a model
         for week, model in enumerate(self.models, start=1):
+            # print some nonsense to note that we are moving!
+            print(f'Fitting model for week {week}...', end='\r')
+            
             # lead the data accordingly
             data_week = pd.concat([X, y], axis=1)
             data_week = self.lead_data(data_week, y_var='dengue_cases', weeks=week)
@@ -102,6 +105,8 @@ class DengueModel():
                     rmse_best = rmse
                     self.models[model] = deepcopy(model_trial)
             
+            # print some statements to make it clear we are progressing hurhurhur
+            print(f'Successfully fitted model for week {week}.')
         
     def predict(self, X):
         '''
