@@ -7,8 +7,6 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#summary">Summary</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#insights">Insights</a></li>
   </ol>
 </details>
 
@@ -105,46 +103,38 @@
 <img src="../images/google_decomp.png" width="500"/>
 </div>
 
-
+>**Findings**
 > DENV_3 is the dominant strain from 2021 onwards, but the percentage is falling in 2023.
 > DENV_2 percentage has dropped significantly since 2021 due to herd immunity.
+>* We can observe that lack of population immunity to denv 3 (In Pink) may have influenced the large dengue cases spikes in 2020 and 2022
+>* Hence, we suggest combining the 4 serology features (DENV_1 to 4) into a single susceptibility ratio to reduce dimension and capture the population susceptibility to the dengue virus.
+>* More details on this susceptibility ratio can be found in [03 Feature engineering Notebook](../code/03_feature_engineering.ipynb)
+
 <div>
 <img src="../images/dengue_stack.png" width="1000"/>
 </div>
 
->Google trends have the highest pearson correlation at time lag of 0 weeks <br>
->Mean temperature have consistent correlation at positive time lag of 0-10 weeks <br>
->Mean wind spead have some correlation at positive time lag of 20 weeks <br>
->Rainfall has some correlation at negative time lag of 20 weeks, and some  <br>
->Maximum temperature have higher correlation at positive time lag of 10 weeks <br>
+>**Findings of pearson correlation of multiple features with dengue cases with positive lags**
+>1. Google trends has very good correlation with no week lags
+>2. Mean temperature has higher correlations at 0-12, 24-32 and 41-52 week lags
+>3. Mean wind spead has higher correlations at 5-7, 17,25 and 43-51 week lags
+>4. Rainfall has no significant correlation at different week lags
+>5. Maximum temperature have higher correlation at 7-17 week lags
+>5. Maximum wind speed have higher correlation at 12-17 and 38-51 week lags
+>
+>This matches with the CCF plots in [03 Feature engineering Notebook](../code/03_feature_engineering.ipynb)
+>
+>Note: CCF and pearson correlation give the same results, the difference is how they treat NA values.
 <div>
 <img src="../images/corr_lag.png" width="1000"/>
 </div>
 
-> Mean temperature have 0 to 10 weeks time lag, which is explained as yearly, the rise in temperature begins in April, which is around 2-3 months earlier than rise in dengue cases. The peak in temperature coincides with the peak in dengue cases. <br>
+> Mean temperature have 0 to 12 weeks time lag, which is explained as yearly, the rise in temperature begins in April, which is around 2-3 months earlier than rise in dengue cases. The peak in temperature coincides with the peak in dengue cases. <br>
 > However, the lag in rainfall is not consistent from the chart.
 <div>
 <img src="../images/temp_dengue_line.png" width="500"/>
 <img src="../images/rain_dengue_line.png" width="500"/>
 </div>
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## Roadmap
-
-1. Data Pre-Processing
-2. Exploratory Data Analysis
-3. Train-Test Splitting
-4. Model Training
-5. Model Selection 
-6. Cost Benefit Analysis
-7. Recommendations
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## Insights
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
