@@ -108,7 +108,7 @@
 > DENV_2 percentage has dropped significantly since 2021 due to herd immunity.
 >* We can observe that lack of population immunity to denv 3 (In Pink) may have influenced the large dengue cases spikes in 2020 and 2022
 >* Hence, we suggest combining the 4 serology features (DENV_1 to 4) into a single susceptibility ratio to reduce dimension and capture the population susceptibility to the dengue virus.
->* More details on this susceptibility ratio can be found in [03 Feature engineering Notebook](../code/03_feature_engineering.ipynb)
+>* More details on this susceptibility ratio can be found in [02 Feature engineering Notebook](../code/02_feature_engineering.ipynb)
 
 <div>
 <img src="../images/dengue_stack.png" width="1000"/>
@@ -122,7 +122,7 @@
 >5. Maximum temperature have higher correlation at 7-17 week lags
 >5. Maximum wind speed have higher correlation at 12-17 and 38-51 week lags
 >
->This matches with the CCF plots in [03 Feature engineering Notebook](../code/03_feature_engineering.ipynb)
+>This matches with the CCF plots in [02 Feature engineering Notebook](../code/02_feature_engineering.ipynb)
 >
 >Note: CCF and pearson correlation give the same results, the difference is how they treat NA values.
 <div>
