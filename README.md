@@ -144,7 +144,7 @@ Based on the business requirement of predicting the number of dengue cases 16 we
 
 ### Model Selection
 
-As a start, 4 model families were trained for a 1-week look ahead prediction of dengue cases on data between 2019 and 2021. Then the models are validated on 2022 data to assess their performance. Prelim evaluation of the model families (see table below) shows that Boosting, Decision Trees and Support Vector perform well even without any hyperparameter tuning. In contrast, Time Series models have similar, if not worse, performance even after tuning. This also suggests that the seasonality of dengue cases may not be as consistent as a Time Series model can handle and/or historical training data is insufficient to fully understand and tune the seasonanlity components.
+As a start, 4 model families were trained for a 1-week look ahead prediction of dengue cases on data between 2019 and 2021. Then the models are validated on 2022 data to assess their performance. Prelim evaluation of the model families (see table below) shows that Boosting, Bagging and Support Vector perform well even without any hyperparameter tuning. In contrast, Time Series models have similar, if not worse, performance even after tuning. This also suggests that the seasonality of dengue cases may not be as consistent as a Time Series model can handle and/or historical training data is insufficient to fully understand and tune the seasonanlity components.
 
 | Model Family | Model | RMSE |
 |-----|-----|:-----:|
@@ -153,8 +153,8 @@ As a start, 4 model families were trained for a 1-week look ahead prediction of 
 | Time Series | SARIMA (1,1,2)(1,1,0,51) | 359 |
 | Time Series | SARIMAX (1,1,2)(1,1,0,48) | 102 |
 | Boosting | Gradient Boosting | 176 |
-| Decision Trees | Bagging | 207 |
-| Decision Trees | Random Forest | 192 |
+| Bagging | Bagging | 207 |
+| Bagging | Random Forest | 192 |
 | Support Vector | Support Vector Machine | 141 |
 
 ### Model Tuning and Evaluation
