@@ -76,9 +76,6 @@ Geospatial Data:  <br>
 Google Trends Data:  <br>
 * [Weekly Google Trends data for dengue 2018 to 2023](https://trends.google.com/trends/explore?date=today%205-y&geo=SG&q=repellent%20%2B%20dengue%20fever%20%2B%20Dengue%20cluster%20%2B%20mosquito%20%2B%20mosquito%20repellent%20%2B%20dengue%20%2B%20aedes&hl=en)
 
-Cost Data: <br> 
-(yada
-yada) 
 
 ## Data Dictionary
 **Climate, serology and google search Data Dictionary**
