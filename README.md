@@ -1,5 +1,3 @@
-<img src="./images/GA-logo.png" style="float: left; margin: 20px; height: 55px">
-
 # Predictive Model for Dengue
 
 <br>
